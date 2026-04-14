@@ -10,7 +10,7 @@ import CompanyCard from "@/components/CompanyCard";
 import { pharmaData } from "@/data/pharmaData";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageSquare } from "lucide-react";
 
 export default function Home() {
   const featuredCompanies = pharmaData.slice(0, 3);
@@ -71,11 +71,13 @@ export default function Home() {
               Join hundreds of pharmacies and hospitals that trust Regards Pharma for their bulk medicine requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-white text-primary hover:bg-accent h-14 px-8 text-base font-bold">
-                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+              <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white h-14 px-8 text-base font-bold shadow-lg shadow-green-900/20">
+                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
+                  <MessageSquare className="mr-2 h-5 w-5" /> Chat on WhatsApp
+                </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-white border-white/20 hover:bg-white/10 h-14 px-8 text-base">
-                <Link to="/contact">Contact Information</Link>
+              <Button asChild variant="outline" size="lg" className="bg-white text-primary hover:bg-slate-50 border-white h-14 px-8 text-base font-bold">
+                <Link to="/products">Browse Catalog</Link>
               </Button>
             </div>
           </div>

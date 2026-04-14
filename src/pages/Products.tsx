@@ -81,11 +81,11 @@ export default function Products() {
                 <h3 className="font-bold text-slate-900">Manufacturers</h3>
               </div>
               
-              {/* Desktop Sidebar / Mobile Horizontal Scroll */}
-              <div className="flex lg:flex-col gap-2 overflow-x-auto pb-2 lg:pb-0 no-scrollbar">
+              {/* Manufacturers List */}
+              <div className="flex lg:flex-col gap-2 overflow-hidden">
                 <button
                   onClick={() => setSelectedCompany("all")}
-                  className={`whitespace-nowrap lg:whitespace-normal px-4 py-2 rounded-lg text-sm transition-colors shrink-0 lg:shrink ${
+                  className={`whitespace-nowrap lg:whitespace-normal px-4 py-2 rounded-lg text-sm transition-colors shrink-0 ${
                     selectedCompany === "all"
                       ? "bg-accent text-primary font-bold"
                       : "text-slate-600 hover:bg-slate-50 border border-transparent lg:border-0"
@@ -93,19 +93,23 @@ export default function Products() {
                 >
                   All Companies
                 </button>
-                {pharmaData.map((company) => (
-                  <button
-                    key={company.id}
-                    onClick={() => setSelectedCompany(company.id)}
-                    className={`whitespace-nowrap lg:whitespace-normal px-4 py-2 rounded-lg text-sm transition-colors shrink-0 lg:shrink ${
-                      selectedCompany === company.id
-                        ? "bg-accent text-primary font-bold"
-                        : "text-slate-600 hover:bg-slate-50 border border-transparent lg:border-0"
-                    }`}
-                  >
-                    {company.name}
-                  </button>
-                ))}
+                
+                {/* Scrollable container for the rest */}
+                <div className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-y-auto pb-4 lg:pb-2 lg:max-h-[calc(100vh-340px)] scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent pr-2">
+                  {pharmaData.map((company) => (
+                    <button
+                      key={company.id}
+                      onClick={() => setSelectedCompany(company.id)}
+                      className={`whitespace-nowrap lg:whitespace-normal px-4 py-2 rounded-lg text-sm transition-colors shrink-0 lg:shrink ${
+                        selectedCompany === company.id
+                          ? "bg-accent text-primary font-bold"
+                          : "text-slate-600 hover:bg-slate-50 border border-transparent lg:border-0"
+                      }`}
+                    >
+                      {company.name}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

@@ -109,7 +109,6 @@ export default function Hero() {
               </div>
               <div>
                 <div className="text-sm font-bold text-slate-900">Certified Quality</div>
-                <div className="text-[10px] text-slate-500">WHO-GMP Standards</div>
               </div>
             </motion.div>
           </motion.div>
