@@ -87,25 +87,25 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-white border-b border-slate-200 animate-in slide-in-from-top duration-300">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden bg-white/95 backdrop-blur-lg border-b border-slate-200 animate-in slide-in-from-top duration-300">
+          <div className="px-4 pt-4 pb-6 space-y-2 sm:px-3">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.href}
                 onClick={() => setIsOpen(false)}
                 className={cn(
-                  "block px-3 py-2 rounded-md text-base font-medium transition-colors",
+                  "block px-4 py-3 rounded-xl text-base font-semibold transition-all",
                   location.pathname === link.href
-                    ? "text-primary bg-accent"
+                    ? "text-primary bg-accent/50"
                     : "text-slate-600 hover:text-primary hover:bg-slate-50"
                 )}
               >
                 {link.name}
               </Link>
             ))}
-            <div className="pt-4 pb-2">
-              <Button asChild className="w-full bg-primary hover:bg-primary/90">
+            <div className="pt-4">
+              <Button asChild className="w-full h-14 bg-primary hover:bg-primary/90 text-lg font-bold rounded-xl shadow-lg shadow-primary/20">
                 <a 
                   href="https://wa.me/919876543210" 
                   target="_blank" 

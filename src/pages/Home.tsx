@@ -54,35 +54,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-24 bg-primary relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-white rounded-full blur-3xl" />
-          <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-white rounded-full blur-3xl" />
-        </div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto space-y-8">
-            <h2 className="text-3xl font-bold text-white sm:text-5xl tracking-tight">
-              Ready to partner with us for your medical supplies?
-            </h2>
-            <p className="text-xl text-primary-foreground/80">
-              Join hundreds of pharmacies and hospitals that trust Regards Pharma for their bulk medicine requirements.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white h-14 px-8 text-base font-bold shadow-lg shadow-green-900/20">
-                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
-                  <MessageSquare className="mr-2 h-5 w-5" /> Chat on WhatsApp
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="bg-white text-primary hover:bg-slate-50 border-white h-14 px-8 text-base font-bold">
-                <Link to="/products">Browse Catalog</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

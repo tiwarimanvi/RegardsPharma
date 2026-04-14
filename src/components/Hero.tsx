@@ -40,15 +40,15 @@ export default function Hero() {
               Regards Pharma is a premier wholesale distributor, bridging the gap between top pharmaceutical manufacturers and healthcare providers.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-base h-14 px-8">
+            <div className="flex flex-col sm:flex-row gap-5">
+              <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg h-16 px-10 font-bold shadow-xl shadow-blue-600/20 transition-all hover:scale-105 active:scale-95">
                 <Link to="/products">
-                  Explore Products <ArrowRight className="ml-2 h-5 w-5" />
+                  Explore Catalog <ArrowRight className="ml-2 h-6 w-6" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-base h-14 px-8 border-slate-200 font-bold text-primary">
+              <Button asChild variant="outline" size="lg" className="text-lg h-16 px-10 border-slate-200 font-bold text-slate-700 hover:bg-slate-50 transition-all hover:scale-105 active:scale-95">
                 <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
-                  Get a Quote (WhatsApp)
+                  Get a Quote
                 </a>
               </Button>
             </div>
